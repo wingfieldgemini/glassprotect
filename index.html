@@ -5,9 +5,50 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Glass Protect — Vitres Teintées & Personnalisation Auto à Cannes</title>
 <meta name="description" content="Glass Protect : spécialiste vitres teintées, film de protection, ciel étoilé et covering automobile sur la Côte d'Azur. Garantie à vie.">
+<meta property="og:title" content="Glass Protect — Vitres Teintées & Personnalisation Auto à Cannes">
+<meta property="og:description" content="Spécialiste vitres teintées, film de protection, ciel étoilé et covering automobile sur la Côte d'Azur. Garantie à vie.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://wingfieldgemini.github.io/glassprotect/">
+<meta property="og:image" content="https://images.unsplash.com/photo-1583121274602-3e2820c69888?w=1200&q=80">
+<meta property="og:locale" content="fr_FR">
+<link rel="preconnect" href="https://images.unsplash.com">
+<link rel="preconnect" href="https://assets.calendly.com">
+<link rel="stylesheet" href="https://assets.calendly.com/assets/external/widget.css">
+<script src="https://assets.calendly.com/assets/external/widget.js" async></script>
 <link rel="stylesheet" href="styles.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Glass Protect",
+  "description": "Spécialiste de la personnalisation et de la protection automobile : vitres teintées, film anti-effraction, ciel étoilé, covering et PPF à Cannes.",
+  "url": "https://wingfieldgemini.github.io/glassprotect/",
+  "telephone": "+33-4-XX-XX-XX-XX",
+  "email": "contact@glassprotect.fr",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Cannes",
+    "postalCode": "06400",
+    "addressCountry": "FR"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 43.5528,
+    "longitude": 7.0174
+  },
+  "openingHours": ["Mo-Fr 09:00-18:00","Sa by appointment"],
+  "priceRange": "€€",
+  "areaServed": ["Cannes","Nice","Monaco","Antibes","Saint-Tropez","Grasse"]
+}
+</script>
 </head>
 <body>
+
+<!-- LOADER -->
+<div class="page-loader"><div class="loader-spinner"></div></div>
+
+<!-- SCROLL PROGRESS -->
+<div class="scroll-progress"></div>
 
 <!-- NAV -->
 <nav class="nav">
@@ -20,6 +61,7 @@
       <li><a href="realisations.html">Réalisations</a></li>
       <li><a href="apropos.html">À Propos</a></li>
       <li><a href="contact.html">Contact</a></li>
+      <li><button class="btn-calendly" onclick="return openCalendly()">📅 Réserver un rendez-vous</button></li>
     </ul>
     <button class="nav-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
   </div>
@@ -28,7 +70,7 @@
 <!-- HERO -->
 <section class="hero">
   <div class="hero-bg">
-    <img src="https://images.unsplash.com/photo-1583121274602-3e2820c69888?w=1600&q=80" alt="Voiture de luxe avec vitres teintées">
+    <img src="https://images.unsplash.com/photo-1583121274602-3e2820c69888?w=1600&q=80" alt="Voiture de luxe avec vitres teintées sur la Côte d'Azur">
   </div>
   <div class="container hero-content">
     <p class="section-label">Cannes · Côte d'Azur</p>
@@ -36,6 +78,7 @@
     <p>Vitres teintées, protection, personnalisation — un savoir-faire d'exception pour sublimer votre véhicule. Garantie à vie sur toutes nos poses.</p>
     <div class="hero-buttons">
       <a href="contact.html" class="btn btn-primary">Devis gratuit</a>
+      <button class="btn btn-outline" onclick="return openCalendly()">📅 Réserver un rendez-vous</button>
       <a href="realisations.html" class="btn btn-outline">Nos réalisations</a>
     </div>
   </div>
@@ -49,7 +92,7 @@
     <p class="section-subtitle reveal">De la teinte haute performance au ciel étoilé sur mesure, nous transformons votre véhicule avec précision et passion.</p>
     <div class="grid-3">
       <div class="card reveal">
-        <div class="card-img"><img src="https://images.unsplash.com/photo-1619767886558-efdc259cde1a?w=600&q=80" alt="Vitres teintées automobile"></div>
+        <div class="card-img"><img class="lazy" data-src="https://images.unsplash.com/photo-1619767886558-efdc259cde1a?w=600&q=80" alt="Pose de vitres teintées sur véhicule" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='600' height='400'%3E%3Crect fill='%231A1A1A' width='600' height='400'/%3E%3C/svg%3E"></div>
         <div class="card-body">
           <h3>Vitres Teintées</h3>
           <p>Films solaires haute performance pour un confort optimal, une protection UV totale et une esthétique incomparable.</p>
@@ -57,7 +100,7 @@
         </div>
       </div>
       <div class="card reveal">
-        <div class="card-img"><img src="https://images.unsplash.com/photo-1552519507-da3b142c6e3d?w=600&q=80" alt="Film de protection automobile"></div>
+        <div class="card-img"><img class="lazy" data-src="https://images.unsplash.com/photo-1552519507-da3b142c6e3d?w=600&q=80" alt="Film de protection anti-effraction automobile" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='600' height='400'%3E%3Crect fill='%231A1A1A' width='600' height='400'/%3E%3C/svg%3E"></div>
         <div class="card-body">
           <h3>Film Anti-Effraction</h3>
           <p>Renforcez la sécurité de votre véhicule. Nos films retardent les tentatives d'intrusion et protègent vos occupants.</p>
@@ -65,7 +108,7 @@
         </div>
       </div>
       <div class="card reveal">
-        <div class="card-img"><img src="https://images.unsplash.com/photo-1494976388531-d1058494cdd8?w=600&q=80" alt="Ciel étoilé automobile"></div>
+        <div class="card-img"><img class="lazy" data-src="https://images.unsplash.com/photo-1494976388531-d1058494cdd8?w=600&q=80" alt="Installation ciel étoilé fibre optique automobile" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='600' height='400'%3E%3Crect fill='%231A1A1A' width='600' height='400'/%3E%3C/svg%3E"></div>
         <div class="card-body">
           <h3>Ciel Étoilé</h3>
           <p>Transformez l'habitacle de votre véhicule en une expérience immersive grâce à notre installation fibre optique sur mesure.</p>
@@ -76,8 +119,39 @@
   </div>
 </section>
 
-<!-- WHY CHOOSE US -->
+<!-- PROCESS -->
 <section class="section" style="background:var(--dark)">
+  <div class="container">
+    <p class="section-label reveal" style="text-align:center">Comment ça marche</p>
+    <h2 class="section-title reveal" style="text-align:center">Notre Processus</h2>
+    <p class="section-subtitle reveal" style="text-align:center;margin-left:auto;margin-right:auto">Un accompagnement simple et efficace, de la demande à la livraison.</p>
+    <div class="process-grid">
+      <div class="process-step reveal">
+        <div class="process-number">1</div>
+        <h3>Devis</h3>
+        <p>Décrivez votre véhicule et vos besoins. Nous vous envoyons un devis détaillé sous 24h.</p>
+      </div>
+      <div class="process-step reveal">
+        <div class="process-number">2</div>
+        <h3>Rendez-vous</h3>
+        <p>Choisissez un créneau qui vous convient. Réservez en ligne ou par téléphone.</p>
+      </div>
+      <div class="process-step reveal">
+        <div class="process-number">3</div>
+        <h3>Pose</h3>
+        <p>Notre équipe réalise l'intervention dans notre atelier avec un soin du détail irréprochable.</p>
+      </div>
+      <div class="process-step reveal">
+        <div class="process-number">4</div>
+        <h3>Garantie</h3>
+        <p>Repartez l'esprit tranquille avec notre garantie à vie sur toutes les poses.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY CHOOSE US -->
+<section class="section">
   <div class="container">
     <p class="section-label reveal">Pourquoi Glass Protect</p>
     <h2 class="section-title reveal">Le choix de l'exigence</h2>
@@ -102,6 +176,25 @@
         <h3>Côte d'Azur</h3>
         <p>Basés à Cannes, nous couvrons Nice, Monaco, Antibes et Saint-Tropez.</p>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- BRANDS -->
+<section class="section" style="background:var(--dark)">
+  <div class="container" style="text-align:center">
+    <p class="section-label reveal">Marques populaires</p>
+    <h2 class="section-title reveal">Ils nous font confiance</h2>
+    <p class="section-subtitle reveal" style="margin-left:auto;margin-right:auto">Nous intervenons sur les plus grandes marques automobiles.</p>
+    <div class="brands-grid reveal">
+      <span class="brand-badge">BMW</span>
+      <span class="brand-badge">Mercedes</span>
+      <span class="brand-badge">Porsche</span>
+      <span class="brand-badge">Tesla</span>
+      <span class="brand-badge">Ferrari</span>
+      <span class="brand-badge">Audi</span>
+      <span class="brand-badge">Range Rover</span>
+      <span class="brand-badge">Lamborghini</span>
     </div>
   </div>
 </section>
@@ -155,23 +248,26 @@
   </div>
 </section>
 
-<!-- TESTIMONIALS -->
+<!-- REVIEWS -->
 <section class="section">
   <div class="container">
-    <p class="section-label reveal">Témoignages</p>
+    <p class="section-label reveal">Avis clients</p>
     <h2 class="section-title reveal">Ce que disent nos clients</h2>
     <div class="grid-3" style="margin-top:2.5rem">
       <div class="testimonial reveal">
+        <div class="testimonial-stars">★★★★★</div>
         <p>« Travail impeccable sur ma Mercedes Classe C. Le rendu est propre, pas une bulle, et l'équipe m'a très bien conseillé sur le choix de la teinte. Je recommande les yeux fermés. »</p>
         <div class="testimonial-author">Laurent M.</div>
         <div class="testimonial-car">Mercedes Classe C — Nice</div>
       </div>
       <div class="testimonial reveal">
+        <div class="testimonial-stars">★★★★★</div>
         <p>« J'ai fait installer un ciel étoilé dans ma BMW Série 5 et le résultat dépasse mes attentes. Un vrai rendu Rolls-Royce à une fraction du prix. Merci Glass Protect ! »</p>
         <div class="testimonial-author">Sophie D.</div>
         <div class="testimonial-car">BMW Série 5 — Cannes</div>
       </div>
       <div class="testimonial reveal">
+        <div class="testimonial-stars">★★★★★</div>
         <p>« VTC sur Cannes, j'ai fait teinter toute ma flotte chez eux. Tarifs corrects, délais respectés, et mes clients apprécient le confort supplémentaire. Partenaire de confiance. »</p>
         <div class="testimonial-author">Karim B.</div>
         <div class="testimonial-car">Flotte VTC — 6 véhicules</div>
@@ -185,7 +281,10 @@
   <div class="container reveal">
     <h2>Prêt à transformer votre véhicule ?</h2>
     <p style="margin:1rem auto 2rem;max-width:500px">Contactez-nous pour un devis gratuit et sans engagement. Intervention rapide sur toute la Côte d'Azur.</p>
-    <a href="contact.html" class="btn btn-primary">Demander un devis</a>
+    <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap">
+      <a href="contact.html" class="btn btn-primary">Demander un devis</a>
+      <button class="btn btn-outline" onclick="return openCalendly()">📅 Réserver un créneau</button>
+    </div>
   </div>
 </section>
 
@@ -229,6 +328,9 @@
     </div>
   </div>
 </footer>
+
+<!-- BACK TO TOP -->
+<button class="back-to-top" aria-label="Retour en haut">↑</button>
 
 <!-- FLOATING WHATSAPP -->
 <a href="https://wa.me/33XXXXXXXXX" class="floating-btn" aria-label="WhatsApp" target="_blank" rel="noopener">

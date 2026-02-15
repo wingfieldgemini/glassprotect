@@ -5,9 +5,21 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Contact — Glass Protect | Devis Gratuit Cannes</title>
 <meta name="description" content="Contactez Glass Protect pour un devis gratuit. Vitres teintées, covering, ciel étoilé à Cannes. Réponse sous 24h.">
+<meta property="og:title" content="Contact — Glass Protect | Devis Gratuit Cannes">
+<meta property="og:description" content="Contactez Glass Protect pour un devis gratuit. Réponse sous 24h.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://images.unsplash.com/photo-1583121274602-3e2820c69888?w=1200&q=80">
+<meta property="og:locale" content="fr_FR">
+<link rel="preconnect" href="https://images.unsplash.com">
+<link rel="preconnect" href="https://assets.calendly.com">
+<link rel="stylesheet" href="https://assets.calendly.com/assets/external/widget.css">
+<script src="https://assets.calendly.com/assets/external/widget.js" async></script>
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
+<div class="page-loader"><div class="loader-spinner"></div></div>
+<div class="scroll-progress"></div>
 
 <nav class="nav">
   <div class="container nav-inner">
@@ -19,6 +31,7 @@
       <li><a href="realisations.html">Réalisations</a></li>
       <li><a href="apropos.html">À Propos</a></li>
       <li><a href="contact.html">Contact</a></li>
+      <li><button class="btn-calendly" onclick="return openCalendly()">📅 Réserver un rendez-vous</button></li>
     </ul>
     <button class="nav-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
   </div>
@@ -36,7 +49,6 @@
   <div class="container">
     <div class="grid-2" style="gap:60px;align-items:start">
 
-      <!-- FORM -->
       <div class="reveal">
         <h2 style="margin-bottom:1.5rem">Envoyez-nous un message</h2>
         <form id="contactForm">
@@ -76,9 +88,12 @@
           </div>
           <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center">Envoyer</button>
         </form>
+        <div style="text-align:center;margin-top:1.5rem">
+          <p style="font-size:.9rem;color:var(--silver);margin-bottom:.8rem">Ou réservez directement un créneau :</p>
+          <button class="btn btn-outline" onclick="return openCalendly()" style="width:100%;justify-content:center">📅 Réserver un rendez-vous en ligne</button>
+        </div>
       </div>
 
-      <!-- INFO -->
       <div class="reveal">
         <h2 style="margin-bottom:1.5rem">Nos coordonnées</h2>
 
@@ -125,6 +140,16 @@
   </div>
 </section>
 
+<!-- MAP -->
+<section class="section" style="background:var(--dark);padding-top:60px;padding-bottom:60px">
+  <div class="container">
+    <h2 class="section-title reveal" style="text-align:center;margin-bottom:1rem">Nous trouver</h2>
+    <div class="map-container reveal">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d46188.55869579!2d6.95!3d43.5528!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12ce818d8b1b3b7d%3A0x1234567890!2sCannes!5e0!3m2!1sfr!2sfr!4v1700000000000" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Localisation Glass Protect à Cannes"></iframe>
+    </div>
+  </div>
+</section>
+
 <footer class="footer">
   <div class="container">
     <div class="footer-grid">
@@ -139,6 +164,8 @@
     </div>
   </div>
 </footer>
+
+<button class="back-to-top" aria-label="Retour en haut">↑</button>
 
 <a href="https://wa.me/33XXXXXXXXX" class="floating-btn" aria-label="WhatsApp" target="_blank" rel="noopener">
   <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
